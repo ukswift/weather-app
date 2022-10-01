@@ -1,7 +1,9 @@
+import { WeatherPage } from "./WeatherPage";
+
 function App() {
   return (
     <div className="App">
-      Weather app
+      <WeatherPage />
     </div>
   );
 }
