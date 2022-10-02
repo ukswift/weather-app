@@ -28,7 +28,7 @@
 
 .searchBar input {
   border: none;
-  width: 50vw;
+  width: 70vw;
   padding: 8px;
   color: white;
   font-weight: bold;
@@ -81,6 +81,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
+  border: 16px solid rgb(223, 223, 223); /* Light grey */
+  border-top: 16px solid greenyellow; /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
