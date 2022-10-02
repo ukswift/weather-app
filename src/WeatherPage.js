@@ -7,12 +7,14 @@ export const WeatherPage = () => {
   console.log(process.env);
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState("");
   const placeRef = useRef("");
   const APIURL = "https://api.openweathermap.org/data/2.5/weather";
   // const bgImageURL = `https://source.unsplash.com/1600x900/?${placeRef.current.value}`;
   // const bgImageURL = `https://source.unsplash.com/1600x900/?${data?.weather[0]?.description}`;
   const fetchData = (place) => {
     setLoading(true);
+    setErr("");
     axios
       .get(APIURL, {
         params: {
@@ -25,9 +27,11 @@ export const WeatherPage = () => {
         console.log(res.data);
         setLoading(false);
         setData(res.data);
+        setErr("");
       })
       .catch((err) => {
         setLoading(false);
+        setErr(err?.response?.data?.message);
         console.log(err);
       });
   };
@@ -45,7 +49,7 @@ export const WeatherPage = () => {
     >
       <SearchBar refs={placeRef} fetchData={fetchData} />
 
-      {data && <WeatherCard data={data} loading={loading} />}
+      {data && <WeatherCard data={data} loading={loading} err={err} />}
     </div>
   );
 };

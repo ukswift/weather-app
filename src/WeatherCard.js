@@ -1,12 +1,15 @@
 import React from "react";
 import { Loading } from "./Loading";
-export const WeatherCard = ({ data, loading }) => {
+import { ErrorMsg } from "./ErrorMsg";
+export const WeatherCard = ({ data, loading, err }) => {
   const { description, icon } = data.weather[0];
   const iconURL = "https://openweathermap.org/img/wn/" + icon + ".png";
   return (
     <div className="weatherCardContainer">
       {loading ? (
         <Loading />
+      ) : err ? (
+        <ErrorMsg msg={err} />
       ) : (
         <div className="weatherCard">
           <h1>
