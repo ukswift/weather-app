@@ -1,7 +1,8 @@
 # Weather app
 
-A simple app to get weather🌦 info.  
-Just enter the city and you get it.
+## Hosted at: [Weather app](https://ukswift.github.io/weather-app/)
+
+A simple app to get weather🌦 info.
 
 **Tech stack :**  
 <br/>
