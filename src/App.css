@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200,400;700&display=swap"); */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+.weatherCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 25px;
+  color: white;
+  width: 30vw;
+  min-height: fit-content;
+  min-width: fit-content;
+}
+.weatherCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.searchBar input {
+  border: none;
+  width: 50vw;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  background: transparent;
+  font-size: 50px;
+}
+.searchBar {
+  font-size: 70px;
+  padding: 0px 20px;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+.serachBarContainer {
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
+}
+.searchBar :focus-visible {
+  outline: none;
+}
+
+.searchBar i {
+  color: white;
+  cursor: pointer;
+  font-size: 3rem;
+}
+.searchBar i:hover {
+  color: yellowgreen;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.loadingContainer {
+  color: white;
+  font-size: 30px;
+}
+.searchBar:hover {
+  border: 1px solid greenyellow;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 0.5s linear infinite;
+  margin-top: 10vh;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 
+.weatherCard:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+} */
